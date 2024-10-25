@@ -1,0 +1,22 @@
+#the-content-all {
+    width: 100%;
+    padding: 1rem; /*
+    padding: top right bottom left;
+    padding: top right&left bottom;
+    */
+    box-sizing: border-box; /*
+    without this: total_width = width + padding_left + padding_right + border_left + border_right + margin_left + margin_right
+    with this:    total_width = width + margin_left + margin_right
+    */
+}
+
+#my-header {
+    width: 100%;
+    text-align: center;
+}
+
+#my-header-sub-element {
+    margin: auto;
+    width: fit-content;
+    text-align: left;
+}
