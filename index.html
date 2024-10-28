@@ -4,25 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Mikkel Kaa">
+    <!-- Bootstrap5 CSS part -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="mystyles.css">
+    <!--<link rel="stylesheet" href="mystyles.css">-->
     <title>Startside</title>
   </head>
   <body>
-    <div id="the-content-all">
-      <div class="container-md">
-        <div class="row justify-content-center">
-          <div class="col text-start text-md-center">
-            <h1>Oversigt</h1>
+    <!-- Navbar at top, for page navigation -->
+    <nav class="navbar">
+      <div class="container-xxl">
+        <a href="#" class="navbar-brand">
+          <span class="fw-bold text-secondary">
+            Oversigt
+          </span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- The top part of the page, after the navbar -->
+    <section id="the-start">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-1 col-lg-2"></div>
+          <div class="col-10 col-lg-8">
+            <h1 class="text-md-center">Oversigt</h1>
+            <p>
+              Velkommen til Startsiden for dette kombineret CV og portefølge, for Mikkel Kaa.<br>
+              Jeg har senest opdateret mit CV d. N/A og mit portefølge d. N/A.
+            </p>
           </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col text-start text-md-center">
-            <p>Velkommen til Startsiden for dette kombineret CV og portefølge, for Mikkel Kaa.</p>
-          </div>
+          <div class="col-1 col-lg-2"></div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- Following is the Bootstrap_5 JavaScript component, placement last in body for performance -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
