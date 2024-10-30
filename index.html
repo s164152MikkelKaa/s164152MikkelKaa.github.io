@@ -11,23 +11,46 @@
   </head>
   <body>
     <!-- Navbar at top, for page navigation -->
-    <nav class="navbar">
-      <div class="container-xxl">
-        <a href="#" class="navbar-brand">
+    <nav class="navbar navbar-expand-md">
+      <div class="container-xl">
+        <a href="#the-start" class="navbar-brand">
           <span class="fw-bold text-secondary">
             Oversigt
           </span>
         </a>
+        <!-- The button for site navigation -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#the-navbar-stuff" aria-controls="the-navbar-stuff"
+        aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- The list of site navigation links -->
+        <div class="collapse navbar-collapse justify-content-end align-center" id="the-navbar-stuff">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#the-start" class="nav-link">Oversigt</a>
+            </li>
+            <li class="nav-item">
+              <a href="mikkel_kaa_cv.html" class="nav-link">Mit CV</a>
+            </li>
+            <li class="nav-item">
+              <a href="portefoelge.html" class="nav-link">Portefølge</a>
+            </li>
+            <li class="nav-item">
+              <a href="kontakt.html" class="nav-link">Kontakt</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
     <!-- The top part of the page, after the navbar -->
     <section id="the-start">
-      <div class="container-lg">
+      <div class="container-md">
         <div class="row">
           <div class="col-1 col-lg-2"></div>
           <div class="col-10 col-lg-8">
-            <h1 class="text-md-center">Oversigt</h1>
+            <h1 class="text-sm-center">Oversigt</h1>
             <p>
               Velkommen til Startsiden for dette kombineret CV og portefølge, for Mikkel Kaa.<br>
               Jeg har senest opdateret mit CV d. N/A og mit portefølge d. N/A.
@@ -37,6 +60,7 @@
         </div>
       </div>
     </section>
+    
     <!-- Following is the Bootstrap_5 JavaScript component, placement last in body for performance -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
