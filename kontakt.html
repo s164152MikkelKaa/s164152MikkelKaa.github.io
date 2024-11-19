@@ -49,7 +49,7 @@
       <div class="container-md pt-3 pb-5 bg-white">
         <h1 class="fw-bolder">Send mig en E-mail</h1>
         <small><span style="color: red;">*</span> Påkrævede felter.</small>
-        <hr>
+        <hr class="mt-1">
         <form class="row g-3" action="https://formsubmit.co/5b8369bb19e42745aafd8429387f2450" method="POST">
           <div class="col-12 order-first">
             <!-- Honeypot, needs to be here to be first due to the "order" modifiers -->
@@ -78,6 +78,7 @@
             <input type="phone" class="form-control" name="Telefon&nbsp;nummer" id="thephonenumber" placeholder="+45 XXXX XXXX">
           </div>
           <div class="col-12 order-5 order-md-0">
+            <!-- This section moves to second to the top position on small screns -->
             <label for="themessage" class="form-label">Besked <span style="color: red;">*</span></label>
             <textarea class="form-control" name="Beskeden" id="themessage" cols="30" rows="4" placeholder="Selve beskeden." required></textarea>
           </div>
