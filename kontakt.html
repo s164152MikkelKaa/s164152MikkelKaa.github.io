@@ -15,7 +15,7 @@
       <div class="container-md">
         <a href="#" class="navbar-brand">
           <span class="fw-bold">
-            Kontakt udvidet
+            Kontakt mig
           </span>
         </a>
         <!-- The button for site navigation -->
@@ -45,9 +45,42 @@
     </nav>
 
     <!-- The top part of the page, after the navbar -->
-    <section id="the-start">
-      <div class="container-md pt-3 pb-5 bg-white"></div>
-    </section>
+    <main>
+      <div class="container-md pt-3 pb-5 bg-white">
+        <h1 class="fw-bolder">Send mig en E-mail</h1>
+        <small><span style="color: red;">*</span> Påkrævede felter.</small>
+        <hr>
+        <form class="row g-3" action="https://formsubmit.co/mikkel.kaa@gmail.com" method="POST">
+          <div class="col-12 order-first">
+            <label for="thesubject" class="form-label">Emne <span style="color: red;">*</span></label>
+            <input type="text" class="form-control" name="Emne" id="thesubject" placeholder="Emne/Overskrift." minlength="3" maxlength="50" required>
+          </div>
+          <div class="col-12 col-md-5 col-xl-4 order-1">
+            <label for="firstname" class="form-label">Fornavn</label>
+            <input type="text" class="form-control" name="Fornavn" id="firstname">
+          </div>
+          <div class="col-12 col-md-7 col-xl-8 order-2">
+            <label for="lastname" class="form-label">Mellem og efternavne</label>
+            <input type="text" class="form-control" name="Mellem&nbsp;og&nbsp;efternavne" id="lastname">
+          </div>
+          <div class="col-12 col-md-8 col-xl-9 order-3">
+            <label for="theemail" class="form-label">E-mail <span style="color: red;">*</span></label>
+            <input type="email" class="form-control" name="Mail&nbsp;adresse" id="theemail" placeholder="eksempel@email.com" required>
+          </div>
+          <div class="col-12 col-md-4 col-xl-3 order-4">
+            <label for="thephonenumber" class="form-label">Telefon nummer</label>
+            <input type="phone" class="form-control" name="Telefon&nbsp;nummer" id="thephonenumber" placeholder="+45 XXXX XXXX">
+          </div>
+          <div class="col-12 order-5 order-md-0">
+            <label for="themessage" class="form-label">Besked <span style="color: red;">*</span></label>
+            <textarea class="form-control" name="Beskeden" id="themessage" cols="30" rows="4" placeholder="Selve beskeden." required></textarea>
+          </div>
+          <div class="col-12 order-last">
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </form>
+      </div>
+    </main>
 
     <footer class="bg-secondary pt-4 pb-5">
       <div class="container-md">
