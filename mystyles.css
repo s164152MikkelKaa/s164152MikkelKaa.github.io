@@ -1,22 +1,69 @@
-#the-content-all {
-    width: 100%;
-    padding: 1rem; /*
-    padding: top right bottom left;
-    padding: top right&left bottom;
-    */
-    box-sizing: border-box; /*
-    without this: total_width = width + padding_left + padding_right + border_left + border_right + margin_left + margin_right
-    with this:    total_width = width + margin_left + margin_right
-    */
+/* "Bs-C" = "Bootstrap class" */
+/* Bootstrap standart color blue: #0d6efd (13, 110, 253)
+   Win-Paint gives this "Luminas" 125
+   Changing "Luminas" to 175 gives (119, 172, 253) navbar-bg
+   and "Luminas" 50 gives (1, 43, 105) nav-item-bg when contains .active */
+
+body {
+    background-color: rgba(248, 249, 250, 1); /* Bs-C: bg-light */
+    min-height: 100vh; /* Moves footer to the bottom on all pages */
+    display: flex; /* Moves footer to the bottom on all pages */
+    flex-direction: column; /* Moves footer to the bottom on all pages */
 }
 
-#my-header {
-    width: 100%;
-    text-align: center;
+main {
+    flex-grow: 1; /* Moves footer to the bottom on all pages */
 }
 
-#my-header-sub-element {
-    margin: auto;
-    width: fit-content;
-    text-align: left;
+nav.navbar {
+    background-color: rgba(119, 172, 253, 1);
+}
+
+.mybg-1 {
+    background-color: rgba(206, 212, 218, 1);
+}
+
+.note-important {
+    color: red;
+}
+
+div.navbar-collapse {
+    margin-top: 0.5rem !important; /* Bs-C: mt-2 (for small screens, owerwrite below) */
+    justify-content: flex-end !important; /* Bs-C: justify-content-end */
+    text-align: right !important; /* Bs-C: text-end */
+    ul.navbar-nav {
+        display: inline-flex !important; /* Bs-C: d-inline-flex */
+        text-align: left !important; /* Bs-C: text-start */
+        li.nav-item {
+            border-radius: 0.5rem !important; /* Bs-C: rounded-3 */
+            background-color: rgba(13, 110, 253, 1); /* Bs-C: bg-primary */
+            a.nav-link {
+                padding: 0.5rem !important; /* Bs-C: p-2 */
+            }
+            a.nav-link:not(.active) {
+                color: black;
+                font-weight: bold !important; /* Bs-C: fw-bold */
+            }
+        }
+        li.nav-item:has(a.nav-link.active) { /* Alters the background color only when the .nav-item contains the/a .active */
+            background-color: rgba(1, 43, 105, 1); /* My background color on the sites owne navbar link */
+            a.nav-link.active {
+                font-weight: bolder !important; /* Bs-C: fw-bolder */
+                color: white;
+            }
+        }
+        li.nav-item ~ li.nav-item { /* Every element "li.nav-item" thats preceded by a "li.nav-item" element */
+            margin-top: 0.25rem; /* Bs-C: mt-1 */
+        }
+    }
+}
+
+@media (min-width: 768px) { /* Owerwrite on larger screens (768px in Bs is the "md" tag) */
+    div.navbar-collapse {
+        margin-top: 0 !important; /* Bs-C: mt-md-0 */
+        ul.navbar-nav li.nav-item ~ li.nav-item {
+            margin-top: 0; /* Bs-C: mt-md-0 */
+            margin-left: 0.25rem; /* Bs-C: ms-md-1 */
+        }
+    }
 }
